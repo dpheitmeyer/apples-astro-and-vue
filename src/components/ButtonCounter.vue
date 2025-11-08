@@ -9,7 +9,10 @@ const count = ref(0)
 
 <style>
 button {
-  color: red;
-  font-size: 0.5rem;
+  color: orange;
+  background-color: black;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
 }
 </style>

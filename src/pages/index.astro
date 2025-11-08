@@ -2,7 +2,6 @@
 import ButtonCounter from '../components/ButtonCounter.vue';
 import Apples from '../components/Apples.vue';
 ---
-
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
@@ -12,10 +11,22 @@ import Apples from '../components/Apples.vue';
 		<title>Apples</title>
 	</head>
 	<body>
-		<h1>Apples</h1>
+
+		<h1>Astro and Vue</h1>
+		<p>Here we have an Astro project with the Vue integration installed.  Below, we'll use two Vue components within Astro!</p>
+		<hr/>
         <Apples soon={true} client:load />
 		<hr/>
         <ButtonCounter client:load/>
 
 	</body>
 </html>
+
+<style is:global>
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+</style>
