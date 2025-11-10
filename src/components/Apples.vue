@@ -37,7 +37,8 @@ onMounted(async () => {
 
 <template>
   <div v-if="loading" class="loading">
-    <p>Loading apples data</p>
+    <div class="loading-icon">◌</div>
+    <div class="loading-message">loading weather...</div>
   </div>
   <div v-else-if="error" class="error">
     <div class="error-icon">⚠️</div>
@@ -73,17 +74,21 @@ onMounted(async () => {
   text-align: center;
   color: #3a3a3a;
 }
+.loading,
 .error {
   padding: 1rem;
-  border: 5px solid red;
-  border-radius: 1rem;
-  background-color: rgb(255, 230, 230);
+
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
 }
-.error-icon {
+.error {
+    border: 5px solid red;
+  border-radius: 1rem;
+  background-color: rgb(255, 230, 230);
+}
+.error-icon, .loading-icon {
   font-size: 3rem;
   padding-right: 1rem;
 }
